@@ -1,5 +1,7 @@
 import 'package:aikata_v2/constants/consts.dart';
+import 'package:aikata_v2/screens/category/item_details.dart';
 import 'package:aikata_v2/widgets/bg_widget.dart';
+import 'package:get/get.dart';
 
 class CategoryDetails extends StatelessWidget {
   final String? title;
@@ -9,10 +11,7 @@ class CategoryDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return bgWidget(
       child: Scaffold(
-        backgroundColor: Colors.transparent,
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
           title: title!.text.fontFamily(bold).white.make(),
         ),
         body: Container(
@@ -44,6 +43,7 @@ class CategoryDetails extends StatelessWidget {
               20.heightBox,
               Expanded(
                 child: GridView.builder(
+                  itemCount: 6,
                   physics: const BouncingScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
@@ -81,7 +81,12 @@ class CategoryDetails extends StatelessWidget {
                         .rounded
                         .outerShadowSm
                         .padding(const EdgeInsets.all(8))
-                        .make();
+                        .make()
+                        .onTap(() {
+                      Get.to(() => const ItemDetails(
+                            title: "Dummy Item",
+                          ));
+                    });
                   },
                 ),
               )

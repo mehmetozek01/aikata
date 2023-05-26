@@ -45,3 +45,10 @@ const elektronik = "Elektronik",
     kozmetik = "Kozmetik, Kişisel Bakım",
     petshop = "Pet Shop",
     eglence = "Kitap, Müzik, Film, Hobi";
+
+// İtem details strings
+const reviews = "Yorumlar",
+    sellerpolicy = "Satıcı Politikası",
+    returnpolity = "İade politikasi",
+    supportPolicy = "Destek Politikası",
+    productsyoumaylike = "Beğenebileceğiniz ürünler";

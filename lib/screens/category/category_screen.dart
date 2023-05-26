@@ -1,6 +1,6 @@
 import 'package:aikata_v2/constants/consts.dart';
 import 'package:aikata_v2/constants/lists.dart';
-import 'package:aikata_v2/screens/category/category_detail.dart';
+import 'package:aikata_v2/screens/category/category_details.dart';
 import 'package:aikata_v2/widgets/bg_widget.dart';
 import 'package:get/get.dart';
 
@@ -53,9 +53,11 @@ class CategoryScreen extends StatelessWidget {
                   .outerShadow
                   .make()
                   .onTap(() {
-                Get.to(() => CategoryDetails(
-                      title: categoriesList[index],
-                    ));
+                Get.to(
+                  () => CategoryDetails(
+                    title: categoriesList[index],
+                  ),
+                );
               });
             },
           ),

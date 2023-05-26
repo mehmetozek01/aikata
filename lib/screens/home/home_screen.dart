@@ -31,6 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: lightGrey,
       body: SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
@@ -151,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                     //Swipper
-                    const SizedBox(height: 10),
+                    10.heightBox,
                     const CardSpecial(),
                     //PopularCategories
                     20.heightBox,
@@ -288,7 +289,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     .make(),
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),

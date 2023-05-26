@@ -25,3 +25,10 @@ const categoryImages = [
   k7,
   k8,
 ];
+
+const itemDetailButtonList = [
+  reviews,
+  privacyPolicy,
+  returnpolity,
+  supportPolicy,
+];
