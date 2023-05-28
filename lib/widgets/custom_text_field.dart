@@ -7,13 +7,15 @@ Widget customTextField({
   String? title,
   String? hint,
   controller,
+  required bool isPass,
 }) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      title!.text.color(turuncu).fontFamily(semibold).size(16).make(),
+      title!.text.color(redColor).fontFamily(semibold).size(16).make(),
       5.heightBox,
       TextFormField(
+        obscureText: isPass,
         controller: controller,
         decoration: InputDecoration(
           hintStyle: const TextStyle(
@@ -26,7 +28,56 @@ Widget customTextField({
           filled: true,
           border: InputBorder.none,
           focusedBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: redColor),
+            borderSide: BorderSide(
+              color: turuncu,
+            ),
+          ),
+        ),
+      ),
+      5.heightBox,
+    ],
+  );
+}
+
+Widget customTextField2({
+  String? title,
+  String? hint,
+  controller,
+  required bool isPass,
+}) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      title!.text.color(redColor).fontFamily(semibold).size(16).make(),
+      5.heightBox,
+      TextFormField(
+        obscureText: isPass,
+        controller: controller,
+        decoration: InputDecoration(
+          isDense: true,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: const BorderSide(
+              color: textfieldGrey,
+            ),
+          ),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: const BorderSide(
+              color: lightGrey,
+            ),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: const BorderSide(
+              color: turuncu,
+            ),
+          ),
+          // filled: true,
+          hintText: hint,
+          hintStyle: const TextStyle(
+            color: textfieldGrey,
+            fontFamily: semibold,
           ),
         ),
       ),

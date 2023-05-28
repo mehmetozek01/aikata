@@ -59,3 +59,6 @@ const String k5 = "assets/images/k5.jpeg";
 const String k6 = "assets/images/k6.jpg";
 const String k7 = "assets/images/k7.jpg";
 const String k8 = "assets/images/k8.jpg";
+
+//profile
+const profile = "assets/images/profile.png";

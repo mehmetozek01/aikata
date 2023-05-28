@@ -1,10 +1,9 @@
-import 'package:aikata_v2/constants/colors.dart';
-import 'package:aikata_v2/constants/images.dart';
+import 'package:aikata_v2/constants/consts.dart';
 import 'package:aikata_v2/screens/auth/signin/sign_in.dart';
-import 'package:flutter/material.dart';
+import 'package:aikata_v2/screens/home/home.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,7 +15,13 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   changeScreen() {
     Future.delayed(const Duration(seconds: 2), () {
-      Get.off(() => const SignIn());
+      auth.authStateChanges().listen((User? user) {
+        if (user == null && mounted) {
+          Get.to(() => const SignIn());
+        } else {
+          Get.to(() => const Home());
+        }
+      });
     });
   }
 

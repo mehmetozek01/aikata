@@ -1,5 +1,6 @@
 import 'package:aikata_v2/constants/consts.dart';
 import 'package:aikata_v2/widgets/item_card_special.dart';
+import 'package:aikata_v2/widgets/our_button.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -31,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: lightGrey,
+      backgroundColor: const Color.fromARGB(255, 251, 251, 251),
       body: SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
@@ -270,13 +271,39 @@ class _HomeScreenState extends State<HomeScreen> {
                                         .fontFamily(semibold)
                                         .color(darkFontGrey)
                                         .make(),
-                                    10.heightBox,
+                                    3.heightBox,
+                                    Row(
+                                      children: [
+                                        VxRating(
+                                          onRatingUpdate: (value) {},
+                                          normalColor: textfieldGrey,
+                                          selectionColor: golden,
+                                          count: 5,
+                                          size: 15,
+                                          stepInt: true,
+                                        ),
+                                        5.widthBox,
+                                        "4.0"
+                                            .text
+                                            .size(13)
+                                            .fontFamily(semibold)
+                                            .make()
+                                      ],
+                                    ),
+                                    3.heightBox,
                                     "600 ₺"
                                         .text
                                         .color(redColor)
                                         .fontFamily(bold)
                                         .size(16)
                                         .make(),
+                                    10.heightBox,
+                                    ourButton(
+                                      color: turuncu,
+                                      onPress: () {},
+                                      textColor: whiteColor,
+                                      title: "Sepete ekle",
+                                    ).box.alignCenter.make(),
                                     10.heightBox
                                   ],
                                 )
@@ -290,6 +317,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                           ),
+                          10.heightBox
                         ],
                       ),
                     ),
@@ -318,7 +346,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                    //all product section
                     20.heightBox,
                     GridView.builder(
                       physics: const NeverScrollableScrollPhysics(),
@@ -329,7 +356,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         crossAxisCount: 2,
                         mainAxisSpacing: 8,
                         crossAxisSpacing: 8,
-                        mainAxisExtent: 300,
+                        mainAxisExtent: 350,
                       ),
                       itemBuilder: (context, index) {
                         return Column(
@@ -337,29 +364,55 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: [
                             Image.asset(
                               tMicrophoneImg,
-                              width: 200,
-                              height: 200,
+                              width: 150,
+                              height: 150,
                               fit: BoxFit.cover,
                             ),
                             const Spacer(),
-                            "Mikrofon"
+                            "BM800BT Black Kondanser Mikrofon Stand Filtre Ses Kartı (PC ve Telefonda Çalışır)"
                                 .text
+                                .overflow(TextOverflow.ellipsis)
+                                .maxLines(2)
+                                .size(15)
                                 .fontFamily(semibold)
                                 .color(darkFontGrey)
                                 .make(),
-                            10.heightBox,
+                            3.heightBox,
+                            Row(
+                              children: [
+                                VxRating(
+                                  onRatingUpdate: (value) {},
+                                  normalColor: textfieldGrey,
+                                  selectionColor: golden,
+                                  count: 5,
+                                  size: 15,
+                                  stepInt: true,
+                                ),
+                                5.widthBox,
+                                "4.0".text.size(13).fontFamily(semibold).make()
+                              ],
+                            ),
+                            3.heightBox,
                             "600 ₺"
                                 .text
                                 .color(redColor)
                                 .fontFamily(bold)
                                 .size(16)
                                 .make(),
-                            10.heightBox
+                            10.heightBox,
+                            ourButton(
+                              color: turuncu,
+                              onPress: () {},
+                              textColor: whiteColor,
+                              title: "Sepete ekle",
+                            ).box.alignCenter.make(),
                           ],
                         )
                             .box
                             .white
-                            .margin(const EdgeInsets.symmetric(horizontal: 4))
+                            .border()
+                            .margin(const EdgeInsets.symmetric(
+                                horizontal: 4, vertical: 4))
                             .rounded
                             .padding(const EdgeInsets.all(12))
                             .make();

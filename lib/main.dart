@@ -1,8 +1,14 @@
 import 'package:aikata_v2/constants/consts.dart';
+import 'package:aikata_v2/firebase_options.dart';
 import 'package:aikata_v2/screens/auth/welcome/splash.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

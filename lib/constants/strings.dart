@@ -52,3 +52,17 @@ const reviews = "Yorumlar",
     returnpolity = "İade politikasi",
     supportPolicy = "Destek Politikası",
     productsyoumaylike = "Beğenebileceğiniz ürünler";
+
+const wishlist = "Favorilerim",
+    orders = "Siparişlerim",
+    messages = "Mesajlar",
+    oldpass = "Eski Şifre",
+    newpass = "Yeni Şifre";
+
+const editprofile = "Profil Düzenle",
+    address = "Adresler",
+    notification = "Bildirimler",
+    secrutiy = "Güvenlik",
+    language = "Dil",
+    // darkmode = "Karanlık Mod",
+    helpcenter = "Yardım";

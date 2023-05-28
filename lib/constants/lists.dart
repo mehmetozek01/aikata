@@ -1,4 +1,5 @@
 import 'package:aikata_v2/constants/consts.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
 
 const socialIconList = [icFacebookLogo, icGoogleLogo, icTwitterLogo];
 
@@ -31,4 +32,44 @@ const itemDetailButtonList = [
   privacyPolicy,
   returnpolity,
   supportPolicy,
+];
+
+const profileButtonList = [orders, wishlist, messages];
+
+List<IconData> profileButtonIcon = [
+  IconlyLight.buy,
+  IconlyLight.heart,
+  IconlyLight.message,
+];
+
+List<IconData> profileButtonIcontraileng = [
+  IconlyLight.arrowRight2,
+  IconlyLight.arrowRight2,
+  IconlyLight.arrowRight2,
+];
+
+const profilEdit = [
+  editprofile,
+  address,
+  notification,
+  secrutiy,
+  language,
+  helpcenter,
+];
+
+List<IconData> profilEditIcon = [
+  IconlyLight.editSquare,
+  IconlyLight.location,
+  IconlyLight.notification,
+  IconlyLight.shieldDone,
+  IconlyLight.moreCircle,
+  IconlyLight.infoSquare,
+];
+List<IconData> profilEditIcontraileng = [
+  IconlyLight.arrowRight2,
+  IconlyLight.arrowRight2,
+  IconlyLight.arrowRight2,
+  IconlyLight.arrowRight2,
+  IconlyLight.arrowRight2,
+  IconlyLight.arrowRight2,
 ];

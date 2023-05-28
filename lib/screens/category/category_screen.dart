@@ -1,7 +1,6 @@
 import 'package:aikata_v2/constants/consts.dart';
 import 'package:aikata_v2/constants/lists.dart';
 import 'package:aikata_v2/screens/category/category_details.dart';
-import 'package:aikata_v2/widgets/bg_widget.dart';
 import 'package:get/get.dart';
 
 class CategoryScreen extends StatelessWidget {
@@ -9,16 +8,16 @@ class CategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return bgWidget(
-      child: Scaffold(
+    return Scaffold(
+      backgroundColor: lightGrey,
+      appBar: AppBar(
         backgroundColor: Colors.transparent,
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          automaticallyImplyLeading: false,
-          title: categories.text.fontFamily(bold).white.make(),
-        ),
-        body: Container(
+        elevation: 0,
+        automaticallyImplyLeading: false,
+        title: categories.text.fontFamily(bold).color(turuncu).make(),
+      ),
+      body: SafeArea(
+        child: Container(
           padding: const EdgeInsets.all(12),
           child: GridView.builder(
             shrinkWrap: true,
